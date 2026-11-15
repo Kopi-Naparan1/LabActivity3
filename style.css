@@ -1,22 +1,202 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+/* ===== Variables ===== */
+:root {
+  --charcoal: #1c1c1c;
+  --charcoal-light: #2a2a2a;
+  --gold: #d4af37;
+  --cream: #fdfbf7;
+
+  --font-heading: "Bebas Neue", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+/* ===== Reset and base ===== */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  background: var(--cream);
+  color: var(--charcoal);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+}
+
+/* ===== Sections ===== */
 section {
-  padding: 2em;
+  padding: 4rem 1.25rem;
+  background: var(--cream);
+  color: var(--charcoal);
+  --card-bg: #ffffff;
+  --border: rgba(28, 28, 28, 0.12);
 }
 
-h1 {
-  font-size: 56px;
+/* dark sections: edit this list if you change the section order */
+#gallery,
+#testimonials,
+#services {
+  background: var(--charcoal);
+  color: var(--cream);
+  --card-bg: var(--charcoal-light);
+  --border: rgba(253, 251, 247, 0.15);
 }
 
-h2 {
-  font-size: 42px;
+/* keeps section content from stretching too wide */
+section > * {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--gold);
+  margin-top: 0.5rem;
+}
+
+section > p {
+  margin-bottom: 2rem;
+}
+/* ===== Navbar ===== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--charcoal);
+  border-bottom: 2px solid var(--gold);
+}
+
+nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 2px solid var(--gold);
+  border-radius: 4px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--charcoal);
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: var(--gold);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--gold);
+}
+
+.btn-secondary:hover {
+  background: var(--gold);
+  color: var(--charcoal);
+}
+
+/* ===== Hero ===== */
 #hero {
-  background-color: #f5f5f5;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  background: linear-gradient(135deg, #111111, var(--charcoal) 60%, #2c2510);
+  color: var(--cream);
+}
+
+.eyebrow {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+#hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p:last-child {
+  max-width: 520px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }

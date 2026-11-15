@@ -346,3 +346,86 @@ nav {
   background: var(--charcoal);
   color: var(--cream);
 }
+
+/* ===== Testimonials ===== */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.testimonial {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--gold);
+  border-radius: 6px;
+  padding: 1.5rem;
+}
+
+.testimonial p {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.testimonial cite {
+  color: var(--gold);
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* ===== Contact ===== */
+.contact-info {
+  margin-bottom: 2rem;
+}
+
+.contact-info p {
+  margin-bottom: 0.5rem;
+}
+
+.contact-info a {
+  color: #9a7b14;
+  font-weight: 600;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 560px;
+}
+
+.contact-form label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  border: 1px solid #bbbbbb;
+  border-radius: 4px;
+  background: #ffffff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid var(--gold);
+  border-color: var(--gold);
+}
+
+.contact-form .btn {
+  margin-top: 0.75rem;
+  align-self: flex-start;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: var(--charcoal);
+  color: var(--cream);
+  text-align: center;
+  padding: 2rem 1.25rem;
+  font-size: 0.85rem;
+  border-top: 2px solid var(--gold);
+}

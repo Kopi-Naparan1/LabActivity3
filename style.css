@@ -200,3 +200,27 @@ nav {
   flex-wrap: wrap;
   gap: 1rem;
 }
+
+/* ===== Trust strip ===== */
+#trust-strip {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1.5rem 1.25rem;
+  background: var(--gold);
+  color: var(--charcoal);
+  text-align: center;
+}
+
+#trust-strip p {
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ===== About ===== */
+#about p {
+  max-width: 65ch;
+  margin-bottom: 1rem;
+}

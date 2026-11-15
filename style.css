@@ -245,3 +245,104 @@ nav {
   color: var(--gold);
   margin-bottom: 0.5rem;
 }
+
+/* ===== Coaches ===== */
+.coaches-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.coach-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.coach-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: #cccccc;
+}
+
+.coach-card h3,
+.coach-card p {
+  padding: 0 1.25rem;
+}
+
+.coach-card h3 {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+}
+
+.coach-role {
+  color: #9a7b14;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.coach-card p:last-child {
+  padding-bottom: 1.25rem;
+}
+
+/* ===== Pricing ===== */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.price-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.price-card.featured {
+  border: 2px solid var(--gold);
+}
+
+.price-card h3 {
+  font-size: 1.8rem;
+}
+
+.price {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  color: #9a7b14;
+  margin: 0.5rem 0 1rem;
+}
+
+.price span {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: inherit;
+  opacity: 0.7;
+}
+
+.price-card ul {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.price-card li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.price-card .btn-secondary {
+  color: var(--charcoal);
+  border-color: var(--charcoal);
+}
+
+.price-card .btn-secondary:hover {
+  background: var(--charcoal);
+  color: var(--cream);
+}
